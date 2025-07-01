@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>UI5 model and bindings</title>
+
+  <!-- SAPUI5 Bootstrap(necessory configuration) loads core library-->
+  <script id="sap-ui-boostrap" src="/resources/sap-ui-core.js"
+    data-sap-ui-resourceroots='{"in.khushboo.ui5.app":"./"}' 
+    data-sap-ui-theme="sap_belize"
+    data-sap-ui-async="true"
+    data-sap-ui-compatVersion="edge"
+    data-sap-ui-onInit="module:sap/ui/core/ComponentSupport">
+  </script>
+</head>
+
+<body class="sapUiBody" id="content">
+  <!-- This div loads the root component of the UI5 application -->
+  <div data-sap-ui-component 
+       data-name="in.khushboo.ui5.app" 
+       data-id="container" 
+       data-settings='{"id" : "app"}'>
+  </div>
+</body>
+
+</html>

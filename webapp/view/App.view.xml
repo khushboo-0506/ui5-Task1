@@ -1,0 +1,7 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"  xmlns="sap.m" controllerName="in.khushboo.ui5.app.controller.BaseController">
+<Shell backgroundImage="./resource/bg.jpg" logo="./resource/logo.png"> <!-- SHELL-> high-level wrapper-->
+  <App id="app">
+    
+  </App>
+</Shell>
+</mvc:View>

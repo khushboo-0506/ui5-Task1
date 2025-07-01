@@ -1,0 +1,24 @@
+<!-- View Declaration-->
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"  xmlns="sap.m" controllerName="in.khushboo.ui5.app.controller.Display">
+
+     <VBox>  
+          <Label text="First Name"/>
+          <Input type="Text" value="{fname}"/>
+
+          <Label text="Last Name"/>
+          <Input type="Text" value="{lname}"/>
+
+          <Label text="Age"/>
+          <Input type="Number" value="{age}"/>
+
+          <Label text="Salary"/>
+          <Input type="Number" value="{salary}"/>
+
+          <Label text="Email"/>
+          <Input type="Text" value="{email}"/>
+     </VBox> 
+
+     <Button type="Accept" text='Save Employee' press='onSave'></Button>
+     
+     <Button type="Reject" text="Delete Employee" press="onDelete"></Button>
+</mvc:View>

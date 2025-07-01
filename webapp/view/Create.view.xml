@@ -1,0 +1,29 @@
+<!-- VIEW DECLARATION-->
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+          xmlns:core="sap.ui.core"
+          xmlns="sap.m"
+          controllerName="in.khushboo.ui5.app.controller.Create">
+  <VBox class="sapUiSmallMargin">
+    <Title id="formTitle" text="Create Employee" level="H2"/>
+
+    <Label text="First Name"/>
+    <Input value="{empModel>/employee/firstName}"/>
+
+    <Label text="Last Name"/>
+    <Input value="{empModel>/employee/lastName}"/>
+
+    <Label text="Age"/>
+    <Input type="Number" value="{empModel>/employee/age}"/>
+
+    <Label text="Salary"/>
+    <Input type="Number" value="{empModel>/employee/salary}"/>
+
+    <Label text="Email"/>
+    <Input id="emailField" value="{empModel>/employee/email}"/>
+    
+    <HBox class="sapUiSmallMarginTop">
+      <Button type="Accept" text="Save" press="onSave"/>
+      <Button type="Reject" text="Cancel" press="onCancel" class="sapUiTinyMarginBegin"/>
+    </HBox>
+  </VBox>
+</mvc:View>

@@ -1,0 +1,6 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"  xmlns="sap.m" controllerName="in.khushboo.ui5.app.controller.LandingPage">
+      
+      <!-- loads an external XML fragment-->
+      <core:Fragment type="XML" fragmentName="in.khushboo.ui5.app.fragment.EmployeeTable"/>
+
+</mvc:View>

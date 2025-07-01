@@ -1,0 +1,105 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "in.khushboo.ui5.app",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{pageTitle}}",
+    "description": "{{description}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "dataSources": {
+      "tableData": {
+        "uri": "./data/data.json",
+        "type": "JSON"
+      },
+      "employee_service": {
+        "uri": "/employee_service/v2/employee",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "phone": true,
+      "tablet": true
+    }
+
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "in.khushboo.ui5.app.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+    "dependencies": {
+      "minVersion": "1.93",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "in.khushboo.ui5.app.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
+        }
+      },
+      "employee": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "tableData"
+      }
+      
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewPath": "in.khushboo.ui5.app.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "viewType": "XML"
+      },
+      "routes": [{
+          "pattern": "",
+          "name": "initial",
+          "target": ["landing_page"]
+        },
+        {
+           "pattern": "create",
+           "name": "createWithoutIndex",
+           "target": ["create"]
+        },
+        {
+          "pattern": "create/{index}",
+          "name": "create",
+          "target": ["create"]
+        },
+        {
+          "pattern": "display/{employeeid}",
+          "name": "display",
+          "target": ["display"]
+        }
+      ],
+      "targets": {
+        "landing_page": {
+          "viewName": "LandingPage"
+        },
+        "create": {
+          "viewName": "Create"
+        },
+        "display": {
+          "viewName": "Display"
+        }
+      }
+    }
+  }
+}
